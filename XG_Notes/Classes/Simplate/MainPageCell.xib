@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="326" height="91"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GUe-oa-IDo">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maincell_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="GUe-oa-IDo">
                         <rect key="frame" x="0.0" y="0.0" width="326" height="91"/>
                         <color key="backgroundColor" red="0.62745098040000002" green="0.62745098040000002" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
@@ -49,4 +49,7 @@
             <point key="canvasLocation" x="312" y="412"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="maincell_back.png" width="62" height="34"/>
+    </resources>
 </document>

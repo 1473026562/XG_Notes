@@ -18,6 +18,7 @@
 		08E97B9E1CD1F3F40031945C /* MainPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E97B9A1CD1F3F40031945C /* MainPageController.m */; };
 		08E97B9F1CD1F3F40031945C /* MainPageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E97B9B1CD1F3F40031945C /* MainPageController.xib */; };
 		08E97BA31CD1F6DC0031945C /* XGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E97BA21CD1F6DC0031945C /* XGUtils.m */; };
+		08E9C4041CD1FDB500D9C055 /* maincell_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E9C4031CD1FDB500D9C055 /* maincell_back@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		08E97B9B1CD1F3F40031945C /* MainPageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainPageController.xib; path = Classes/Simplate/MainPageController.xib; sourceTree = "<group>"; };
 		08E97BA11CD1F6DC0031945C /* XGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGUtils.h; sourceTree = "<group>"; };
 		08E97BA21CD1F6DC0031945C /* XGUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGUtils.m; sourceTree = "<group>"; };
+		08E9C4031CD1FDB500D9C055 /* maincell_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "maincell_back@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +95,6 @@
 				08E97B4C1CD1E6ED0031945C /* XG_Notes */,
 				08E97B661CD1E6EE0031945C /* XG_NotesTests */,
 				08E97B711CD1E6EE0031945C /* XG_NotesUITests */,
-				08E97B871CD1EB4C0031945C /* Images */,
 				08E97B4B1CD1E6ED0031945C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,6 +112,7 @@
 		08E97B4C1CD1E6ED0031945C /* XG_Notes */ = {
 			isa = PBXGroup;
 			children = (
+				08E9C4001CD1FCD200D9C055 /* images */,
 				08E97B801CD1E7250031945C /* Classes */,
 				08E97B501CD1E6ED0031945C /* AppDelegate.h */,
 				08E97B511CD1E6ED0031945C /* AppDelegate.m */,
@@ -156,13 +158,6 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		08E97B871CD1EB4C0031945C /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Images;
-			sourceTree = "<group>";
-		};
 		08E97B951CD1F3C80031945C /* Simplate */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +181,14 @@
 			);
 			name = XG_Notes;
 			path = Classes/XG_Notes;
+			sourceTree = "<group>";
+		};
+		08E9C4001CD1FCD200D9C055 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				08E9C4031CD1FDB500D9C055 /* maincell_back@2x.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +296,7 @@
 			files = (
 				08E97B9D1CD1F3F40031945C /* MainPageCell.xib in Resources */,
 				08E97B5A1CD1E6ED0031945C /* Assets.xcassets in Resources */,
+				08E9C4041CD1FDB500D9C055 /* maincell_back@2x.png in Resources */,
 				08E97B9F1CD1F3F40031945C /* MainPageController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,6 +538,7 @@
 				08E97B791CD1E6EE0031945C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		08E97B7A1CD1E6EE0031945C /* Build configuration list for PBXNativeTarget "XG_NotesTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +547,7 @@
 				08E97B7C1CD1E6EE0031945C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		08E97B7D1CD1E6EE0031945C /* Build configuration list for PBXNativeTarget "XG_NotesUITests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +556,7 @@
 				08E97B7F1CD1E6EE0031945C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
