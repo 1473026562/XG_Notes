@@ -4,17 +4,20 @@
 //
 //  Created by 贾  on 16/4/28.
 //  Copyright © 2016年 XiaoGang. All rights reserved.
-//  github: @https://www.github.com/jiaxiaogang
+//  github: https://github.com/jiaxiaogang/XG_Notes
 //
 
 #import "MainPageController.h"
 #import "MainPageCell.h"
 #import "XGUtils.h"
+#import "XGNotesController.h"
+#import "XGNotesStore.h"
 
 @interface MainPageController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong,nonatomic) NSMutableArray *datas;
+@property (strong,nonatomic) XGNotesStore *store;
 
 @end
 
@@ -35,11 +38,18 @@
     self.datas = [[NSMutableArray alloc]init];
     NSMutableArray *tempArr = [[NSMutableArray alloc]initWithObjects:@"QQ:283636001",@"QQ交流群:193069075",@"微信:jia2764894",@"3",@"4", nil];
     for (int i = 0; i < tempArr.count; i++) {
-        DataModel *dataModel = [[DataModel alloc]init];
-        dataModel.content = [tempArr objectAtIndex:i];
+        XGNotesDataModel *dataModel = [[XGNotesDataModel alloc]init];
+        dataModel.articleContent = [tempArr objectAtIndex:i];
         dataModel.brief = [tempArr objectAtIndex:i];
-        dataModel.createTime = [NSString stringWithFormat:@"%lld",[XGUtils systemNowTimeSecondPlusThreeZero]];
+        dataModel.addTime = [NSString stringWithFormat:@"%lld",[XGUtils systemNowTimeSecondPlusThreeZero]];
         [self.datas addObject:dataModel];
+    }
+    
+    self.store = [[XGNotesStore alloc]init];
+    NSMutableArray *localDatas = [self.store getLocalDraftNotSync];
+    for (int i = 0; i < localDatas.count; i++) {
+        XGNotesDataModel *localData = [[XGNotesDataModel alloc]initWithDraftDic:[localDatas objectAtIndex:i]];
+        [self.datas addObject:localData];
     }
 }
 -(void)initDisplay{
@@ -67,9 +77,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MainPageCell *cell = [self.tableView dequeueReusableCellWithIdentifier:[MainPageCell reuseIdentifier]];
-    [cell setData:[self.datas objectAtIndex:indexPath.row]];
-    return cell;
+    if (self.datas.count > indexPath.row) {
+        MainPageCell *cell = [self.tableView dequeueReusableCellWithIdentifier:[MainPageCell reuseIdentifier]];
+        [cell setData:[self.datas objectAtIndex:indexPath.row]];
+        return cell;
+    }
+    return [[UITableViewCell alloc]init];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -92,7 +105,13 @@
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if (self.datas.count > indexPath.row) {
+        XGNotesDataModel *simpleDataModel = [self.datas objectAtIndex:indexPath.row];
+        XGNotesDataModel *dataModel = [self.store getDraftDataModelWithTime:simpleDataModel.addTime];
+        XGNotesController *page = [[XGNotesController alloc]initWithMDDraft:dataModel];
+        [self.navigationController pushViewController:page animated:true];
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath

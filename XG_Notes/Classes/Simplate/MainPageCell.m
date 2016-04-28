@@ -4,6 +4,7 @@
 //
 //  Created by 贾  on 16/4/28.
 //  Copyright © 2016年 XiaoGang. All rights reserved.
+//  github: https://github.com/jiaxiaogang/XG_Notes
 //
 
 #import "MainPageCell.h"
@@ -11,7 +12,7 @@
 @interface MainPageCell ()
 
 @property (weak, nonatomic) IBOutlet UILabel *descLab;
-@property (strong,nonatomic) DataModel *dataModel;
+@property (strong,nonatomic) XGNotesDataModel *dataModel;
 
 @end
 @implementation MainPageCell
@@ -42,12 +43,13 @@
 /**
  *  MARK:--------------------setData--------------------
  */
--(void) setData:(DataModel*)dataModel{
+-(void) setData:(XGNotesDataModel*)dataModel{
     self.dataModel = dataModel;
+    [self refreshDisplay];
 }
 
 -(void) refreshDisplay{
-    if (self.dataModel) {
+    if (self.dataModel && [self.dataModel isKindOfClass:[XGNotesDataModel class]] && NSSTRINGISVALID(self.dataModel.brief)) {
         [self.descLab setText:self.dataModel.brief];
     }
 }

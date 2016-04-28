@@ -1,18 +1,19 @@
 //
-//  MyWriteTextView.m
-//  Tanker
+//  XGTextView.m
+//  XG_Notes
 //
-//  Created by 贾  on 16/2/27.
-//  Copyright © 2016年 Tanker. All rights reserved.
+//  Created by 贾  on 16/4/28.
+//  Copyright © 2016年 XiaoGang. All rights reserved.
+//  github: https://github.com/jiaxiaogang/XG_Notes
 //
 
-#import "MyWriteTextView.h"
+#import "XGTextView.h"
 #import "XGUtils.h"
 #import "NSTextAttachmentURL.h"
 
 #define kFirstLineHeadIndent 10.9
 
-@interface MyWriteTextView () <UITextViewDelegate>
+@interface XGTextView () <UITextViewDelegate>
 
 @property (strong,nonatomic) NSMutableParagraphStyle *wordStyle;
 @property (strong,nonatomic) NSMutableParagraphStyle *imgStyle;
@@ -25,7 +26,7 @@
 @property (assign, nonatomic) int checkToAutoSaveTime;              //自动保存计数器
 
 @end
-@implementation MyWriteTextView
+@implementation XGTextView
 
 
 -(id) initWithCoder:(NSCoder *)aDecoder{
@@ -52,7 +53,6 @@
     [self setFont:[XGUtils defaultFontOfSize:18]];
     [self setTextColor:[UIColor redColor]];
     [self setContentInset:UIEdgeInsetsMake(0, 0, 15, 0)];
-    [self setValue:@(self.kMaxContentLength) forKey:@"limit"];
 }
 
 /**
@@ -73,7 +73,7 @@
         drawWidth = (self.frame.size.width - 32) * scale;
         drawHeight = oriHeight / oriWidth * drawWidth;
     }
-
+    
     //5.显示创建图片附件
     NSTextAttachmentURL *att = [[NSTextAttachmentURL alloc] init];
     att.image = img;
@@ -165,7 +165,7 @@
 {
     [self resetLayoutWithRange:NSMakeRange(0, self.attributedText.length)];
     [self setFont:[XGUtils defaultFontOfSize:18]];
-    [self setTextColor:[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1]];
+    [self setTextColor:[UIColor redColor]];
     //[self.textView resignFirstResponder];
 }
 
@@ -348,8 +348,8 @@
  *          -如果图片左侧或右侧缺失\n，则补齐；
  */
 -(void)textViewDidBeginEditing:(UITextView *)textView{
-    if (self.myWriteTextDelegate && [self.myWriteTextDelegate respondsToSelector:@selector(myWriteTextViewBeginEditing)]) {
-        [self.myWriteTextDelegate myWriteTextViewBeginEditing];
+    if (self.xgTextDelegate && [self.xgTextDelegate respondsToSelector:@selector(xgTextViewBeginEditing)]) {
+        [self.xgTextDelegate xgTextViewBeginEditing];
     }
     
     [self recordPosYWithSelectedRange:self.selectedRange];
@@ -396,19 +396,6 @@
     else if(text.length>10){
         self.lastInputFromPastedPad = true;
     }
-    //限制最大长度
-    if(text.length!=0)
-    {
-        NSString * toBeString = [textView.text stringByReplacingCharactersInRange:range withString:text];
-        if(toBeString.length>=self.kMaxContentLength)
-        {
-            //[UIUtil showMsgAlertWithTitle:@"提示" message:[NSString stringWithFormat:@"正文最多%d个字.",self.kMaxContentLength]];
-        }
-        if ([toBeString length] > self.kMaxContentLength) {
-            textView.text = [toBeString substringToIndex:self.kMaxContentLength];
-            return NO;
-        }
-    }
     return YES;
 }
 
@@ -436,13 +423,13 @@
         self.waitEndEditCheckRect = true;
     }
     //每输入键盘40次;自动保存;
-    if (self.myWriteTextDelegate && [self.myWriteTextDelegate respondsToSelector:@selector(myWriteTextViewNeedAutoSave)]) {
+    if (self.xgTextDelegate && [self.xgTextDelegate respondsToSelector:@selector(xgTextViewNeedAutoSave)]) {
         self.checkToAutoSaveTime++;
         if(self.checkToAutoSaveTime>30)
         {
             self.checkToAutoSaveTime = 0;
-            if (self.myWriteTextDelegate && [self.myWriteTextDelegate respondsToSelector:@selector(myWriteTextViewSaveDraftToLocalTMCache)]) {
-                [self.myWriteTextDelegate myWriteTextViewSaveDraftToLocalTMCache];
+            if (self.xgTextDelegate && [self.xgTextDelegate respondsToSelector:@selector(xgTextViewSaveDraftToLocalTMCache)]) {
+                [self.xgTextDelegate xgTextViewSaveDraftToLocalTMCache];
             }
         }
     }

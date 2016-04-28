@@ -1,14 +1,15 @@
 //
-//  DTHTMLWriter_Simple.h
-//  Tanker
+//  XGHtmlBuilder.h
+//  XG_Notes
 //
-//  Created by 贾  on 15/8/1.
-//  Copyright (c) 2015年 Tanker. All rights reserved.
+//  Created by 贾  on 16/4/28.
+//  Copyright © 2016年 XiaoGang. All rights reserved.
+//  github: https://github.com/jiaxiaogang/XG_Notes
 //
 
 #import <Foundation/Foundation.h>
 
-@interface DTHTMLWriter_Simple : NSObject
+@interface XGHtmlBuilder : NSObject
 
 - (id)initWithAttributedString:(NSAttributedString *)attributedString;
 - (NSString *)HTMLString;

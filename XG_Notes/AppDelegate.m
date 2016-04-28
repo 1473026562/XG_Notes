@@ -21,7 +21,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     MainPageController *page = [[MainPageController alloc]init];
-    [self.window setRootViewController:page];
+    UINavigationController *rootNav = [[UINavigationController alloc] initWithRootViewController:page];
+    [self.window setRootViewController:rootNav];
     [self.window makeKeyAndVisible];
     return YES;
 }

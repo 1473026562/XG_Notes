@@ -1,9 +1,10 @@
 //
-//  HtmlParserAndBuilding.m
-//  Tanker
+//  XGHtmlParser.m
+//  XG_Notes
 //
-//  Created by 贾  on 15/8/5.
-//  Copyright (c) 2015年 Tanker. All rights reserved.
+//  Created by 贾  on 16/4/28.
+//  Copyright © 2016年 XiaoGang. All rights reserved.
+//  github: https://github.com/jiaxiaogang/XG_Notes
 //
 
 /**
@@ -11,7 +12,7 @@
  *  1:解析未同步草稿;
  *  2:解析已同步草稿;
  */
-#import "ArticleDraftHtmlParser.h"
+#import "XGHtmlParser.h"
 #import "HTMLParser.h"
 #import "TMDiskCache.h"
 #import "SDImageCache.h"
@@ -19,7 +20,7 @@
 #import "SDWebImageManager.h"
 #import "XGUtils.h"
 
-@implementation ArticleDraftHtmlParser
+@implementation XGHtmlParser
 
 /**
  *  MARK:--------------------解析本地html--------------------
@@ -41,7 +42,7 @@
     }
     
     //2,解析
-    NSError *error =nil;  
+    NSError *error =nil;
     NSMutableAttributedString *mStr = [[NSMutableAttributedString alloc]init];
     HTMLParser *parser = [[HTMLParser alloc] initWithString:html error:&error];
     if(error){
@@ -64,12 +65,12 @@
                         pImg = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:curImgSrc];
                         if(!pImg)
                         {
-//                            NSURL *url = [NSURL URLWithString:curImgSrc];
-//                            [[SDWebImageManager sharedManager]downloadWithURL:url options:0 progress:nil
-//                                                                    completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished)
-//                             {
-//                                 TKLog(@"下载完成");
-//                             }];
+                            //                            NSURL *url = [NSURL URLWithString:curImgSrc];
+                            //                            [[SDWebImageManager sharedManager]downloadWithURL:url options:0 progress:nil
+                            //                                                                    completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished)
+                            //                             {
+                            //                                 TKLog(@"下载完成");
+                            //                             }];
                             
                             pImg = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:curImgSrc]]];
                             [[SDImageCache sharedImageCache] storeImage:pImg forKey:curImgSrc];

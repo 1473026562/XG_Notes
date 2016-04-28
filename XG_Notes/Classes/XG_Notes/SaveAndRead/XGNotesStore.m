@@ -1,20 +1,16 @@
 //
-//  ArticleDraftStore.m
-//  Tanker
+//  XGNotesStore.m
+//  XG_Notes
 //
-//  Created by 贾  on 15/8/5.
-//  Copyright (c) 2015年 Tanker. All rights reserved.
+//  Created by 贾  on 16/4/28.
+//  Copyright © 2016年 XiaoGang. All rights reserved.
+//  github: https://github.com/jiaxiaogang/XG_Notes
 //
 
-
-/**
- *  MARK:用于存储我的草稿的目录;
- *  //存储:
- */
-#import "ArticleDraftStore.h"
+#import "XGNotesStore.h"
 #import "TMDiskCache.h"
 #import "SDImageCache.h"
-#import "ArticleDraftHtmlParser.h"
+#import "XGHtmlParser.h"
 #import "XGUtils.h"
 
 //用户的草稿目录
@@ -22,13 +18,13 @@
 //TMCache中用time取草稿
 #define KEY_ARTICLEDRAFT_TMCACHE(time) [NSString stringWithFormat:@"%@_%@_ArticleDraft",@"jxgID",time]
 
-@interface ArticleDraftStore()
+@interface XGNotesStore()
 
 
 @end
 
 
-@implementation ArticleDraftStore
+@implementation XGNotesStore
 
 
 /**
@@ -117,7 +113,7 @@
  *  未同步;新的本地图片数组;TMCache中清除掉这篇草稿的所有图;换成新的;
  *  未同步;则删掉已经删掉的在线缓冲图;
  */
--(void) addDraftWithDraftDataModel:(MDArticleDraftDataModel*)dataModel
+-(void) addDraftWithDraftDataModel:(XGNotesDataModel*)dataModel
                withNewOnlineImgDic:(NSDictionary*)newOnlineImgDic
                 withNewLocalImgArr:(NSMutableArray*)newLocalImgArr
               withDelOnlineImgKeys:(NSArray*)delOnlineImgKeys{
@@ -187,15 +183,15 @@
 /**
  *  MARK:--------------------获得一篇草稿(本地)--------------------
  */
--(MDArticleDraftDataModel*) getDraftDataModelWithTime:(NSString*)time
+-(XGNotesDataModel*) getDraftDataModelWithTime:(NSString*)time
 {
     NSDictionary *draft = [[TMDiskCache sharedCache] objectForKey:KEY_ARTICLEDRAFT_TMCACHE(time)];
     if (draft != nil) {
-        return [[MDArticleDraftDataModel alloc]initWithDraftDic:draft];
+        return [[XGNotesDataModel alloc]initWithDraftDic:draft];
     }
     return nil;
 }
--(MDArticleDraftDataModel*) getDraftDataModelWithArticleId:(NSString*)artId
+-(XGNotesDataModel*) getDraftDataModelWithArticleId:(NSString*)artId
 {
     if(NSSTRINGISVALID(artId))
     {

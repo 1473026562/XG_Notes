@@ -1,17 +1,17 @@
 //
-//  DTHTMLWriter_Simple.m
-//  Tanker
+//  XGHtmlBuilder.m
+//  XG_Notes
 //
-//  Created by 贾  on 15/8/1.
-//  Copyright (c) 2015年 Tanker. All rights reserved.
+//  Created by 贾  on 16/4/28.
+//  Copyright © 2016年 XiaoGang. All rights reserved.
+//  github: https://github.com/jiaxiaogang/XG_Notes
 //
 
-#import "DTHTMLWriter_Simple.h"
-//#import "NSAttributedString+HTML.h"
+#import "XGHtmlBuilder.h"
 #import "NSTextAttachmentURL.h"
 #import "XGUtils.h"
 
-@implementation DTHTMLWriter_Simple
+@implementation XGHtmlBuilder
 {
     NSAttributedString *_attributedString;
     NSString *_HTMLString;
@@ -66,7 +66,7 @@
                 [imgAttachmentArr addObject:findAtt];
                 imgNum++;
             }
-
+            
             //img---1:倒数第二段为图片;则去掉最后一段(如果是空)
             if(i == paragraphs.count - 2)
             {

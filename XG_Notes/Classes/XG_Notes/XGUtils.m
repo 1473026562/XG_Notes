@@ -4,10 +4,11 @@
 //
 //  Created by 贾  on 16/4/28.
 //  Copyright © 2016年 XiaoGang. All rights reserved.
+//  github: https://github.com/jiaxiaogang/XG_Notes
 //
 
 #import "XGUtils.h"
-
+#import "NSTextAttachmentURL.h"
 
 @implementation XGUtils
 
@@ -84,6 +85,24 @@
     
     return newImage ;
 }
+
+/**
+ *  MARK:--------------------提取NSTextAttachmentURL数组中的图片数组--------------------
+ */
++(NSMutableArray*) convertAttachmentURLArr2ImgArr:(NSMutableArray*)attachmentURLArr{
+    NSMutableArray *imgArr = [[NSMutableArray alloc]init];
+    if(attachmentURLArr!= nil){
+        for (int i = 0; i< attachmentURLArr.count; i++) {
+            NSObject *itemObj = attachmentURLArr[i];
+            if([itemObj isKindOfClass:[NSTextAttachmentURL class]]){
+                NSTextAttachmentURL *itemAtt = (NSTextAttachmentURL*)itemObj;
+                [imgArr addObject:itemAtt.image];
+            }
+        }
+    }
+    return imgArr;
+}
+
 
 
 @end

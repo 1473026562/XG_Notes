@@ -1,15 +1,16 @@
 //
-//  ArticleDraftStore.h
-//  Tanker
+//  XGNotesStore.h
+//  XG_Notes
 //
-//  Created by 贾  on 15/8/5.
-//  Copyright (c) 2015年 Tanker. All rights reserved.
+//  Created by 贾  on 16/4/28.
+//  Copyright © 2016年 XiaoGang. All rights reserved.
+//  github: https://github.com/jiaxiaogang/XG_Notes
 //
 
 #import <Foundation/Foundation.h>
-#import "MDArticleDraftDataModel.h"
+#import "XGNotesDataModel.h"
 
-@interface ArticleDraftStore : NSObject
+@interface XGNotesStore : NSObject
 
 -(id) init;
 
@@ -33,7 +34,7 @@
 /**
  *  MARK:--------------------Add--------------------
  */
--(void) addDraftWithDraftDataModel:(MDArticleDraftDataModel*)dataModel
+-(void) addDraftWithDraftDataModel:(XGNotesDataModel*)dataModel
                withNewOnlineImgDic:(NSDictionary*)newOnlineImgDic
                 withNewLocalImgArr:(NSMutableArray*)newLocalImgArr
               withDelOnlineImgKeys:(NSArray*)delOnlineImgKeys;
@@ -42,8 +43,8 @@
  *  MARK:--------------------未同步草稿使用createTime,已同步使用addTime--------------------
  *  返回字典不包括图片数组;图片在解析htmlContent时自动取;
  */
--(MDArticleDraftDataModel*) getDraftDataModelWithTime:(NSString*)time;
--(MDArticleDraftDataModel*) getDraftDataModelWithArticleId:(NSString*)artId;
+-(XGNotesDataModel*) getDraftDataModelWithTime:(NSString*)time;
+-(XGNotesDataModel*) getDraftDataModelWithArticleId:(NSString*)artId;
 
 /**
  *  MARK:--------------------更新一条草稿中的数据--------------------

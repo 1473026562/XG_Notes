@@ -4,6 +4,7 @@
 //
 //  Created by 贾  on 16/4/28.
 //  Copyright © 2016年 XiaoGang. All rights reserved.
+//  github: https://github.com/jiaxiaogang/XG_Notes
 //
 
 #import <Foundation/Foundation.h>
@@ -12,6 +13,8 @@
 #define SYSTEM_VERSION   [[[UIDevice currentDevice] systemVersion] floatValue]
 #define IOSVERSION_9 SYSTEM_VERSION >= 9.0
 #define NSSTRINGISVALID(a) (a  && ![a isKindOfClass:[NSNull class]] && [a isKindOfClass:[NSString class]] && ![a isEqualToString:@""])
+#define ScreenHeight [[UIScreen mainScreen] bounds].size.height
+#define ScreenWidth [[UIScreen mainScreen] bounds].size.width
 
 typedef void (^Action)();
 typedef void (^Action_OnePram)(id);
@@ -42,4 +45,6 @@ typedef id (^Func_NinePram)(id,id,id,id,id,id,id,id,id);
 + (UIFont *) defaultBoldFontOfSize:(CGFloat)fontsize;
 +(NSString*) subStringWithRangeAndCheckOut:(NSRange)range withOldStr:(NSString*)oldStr;
 + (UIImage *)imageByScalingToSize:(CGSize)targetSize withOldImg:(UIImage*)oldImg;
++(NSMutableArray*) convertAttachmentURLArr2ImgArr:(NSMutableArray*)attachmentURLArr;
+
 @end

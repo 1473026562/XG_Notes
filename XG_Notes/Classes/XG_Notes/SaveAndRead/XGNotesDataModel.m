@@ -1,13 +1,14 @@
 //
-//  MDArticleDraftDataModel.m
-//  Tanker
+//  XGNotesDataModel.m
+//  XG_Notes
 //
-//  Created by 贾  on 16/1/15.
-//  Copyright © 2016年 Tanker. All rights reserved.
+//  Created by 贾  on 16/4/28.
+//  Copyright © 2016年 XiaoGang. All rights reserved.
+//  github: https://github.com/jiaxiaogang/XG_Notes
 //
 
-#import "MDArticleDraftDataModel.h"
-#import "ArticleDraftStore.h"
+#import "XGNotesDataModel.h"
+#import "XGNotesStore.h"
 
 /**
  *  MARK:--------------------单篇草稿的数据模型--------------------
@@ -15,7 +16,7 @@
  *  读:建议从本类读取单篇草稿数据(只读)
  *  存:建议从ArticleDraftStore类作增,删,改等持久化操作(因本类只管理草稿内容,像插图及目录内容本类无法管理和存储)
  */
-@implementation MDArticleDraftDataModel
+@implementation XGNotesDataModel
 
 
 /**
@@ -81,7 +82,7 @@
  */
 -(void)saveToDisk
 {
-    [[[ArticleDraftStore alloc] init] addDraftWithDraftDataModel:self withNewOnlineImgDic:nil withNewLocalImgArr:nil withDelOnlineImgKeys:nil];
+    [[[XGNotesStore alloc] init] addDraftWithDraftDataModel:self withNewOnlineImgDic:nil withNewLocalImgArr:nil withDelOnlineImgKeys:nil];
 }
 
 

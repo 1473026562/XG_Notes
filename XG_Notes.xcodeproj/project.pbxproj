@@ -7,24 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08C50B111CD233DE00D3596B /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C50B0D1CD233DE00D3596B /* MBProgressHUD+Add.m */; };
+		08C50B121CD233DE00D3596B /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 08C50B0E1CD233DE00D3596B /* MBProgressHUD.bundle */; };
+		08C50B131CD233DE00D3596B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C50B101CD233DE00D3596B /* MBProgressHUD.m */; };
+		08C50B1C1CD236A100D3596B /* XGNotesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C50B1A1CD236A100D3596B /* XGNotesController.m */; };
+		08C50B1D1CD236A100D3596B /* XGNotesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08C50B1B1CD236A100D3596B /* XGNotesController.xib */; };
+		08C50B201CD2378E00D3596B /* XGTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C50B1F1CD2378E00D3596B /* XGTextView.m */; };
+		08C50B231CD2383E00D3596B /* XGNotesStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C50B221CD2383E00D3596B /* XGNotesStore.m */; };
+		08C50B261CD238F900D3596B /* XGNotesDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C50B251CD238F900D3596B /* XGNotesDataModel.m */; };
+		08C50B291CD23C6600D3596B /* XGHtmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C50B281CD23C6600D3596B /* XGHtmlParser.m */; };
+		08C50B2C1CD23D6300D3596B /* XGHtmlBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C50B2B1CD23D6300D3596B /* XGHtmlBuilder.m */; };
 		08E97B4F1CD1E6ED0031945C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E97B4E1CD1E6ED0031945C /* main.m */; };
 		08E97B521CD1E6ED0031945C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E97B511CD1E6ED0031945C /* AppDelegate.m */; };
 		08E97B5A1CD1E6ED0031945C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E97B591CD1E6ED0031945C /* Assets.xcassets */; };
 		08E97B681CD1E6EE0031945C /* XG_NotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E97B671CD1E6EE0031945C /* XG_NotesTests.m */; };
 		08E97B731CD1E6EE0031945C /* XG_NotesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E97B721CD1E6EE0031945C /* XG_NotesUITests.m */; };
-		08E97B941CD1F3C20031945C /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E97B931CD1F3C20031945C /* DataModel.m */; };
 		08E97B9C1CD1F3F40031945C /* MainPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E97B971CD1F3F40031945C /* MainPageCell.m */; };
 		08E97B9D1CD1F3F40031945C /* MainPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E97B981CD1F3F40031945C /* MainPageCell.xib */; };
 		08E97B9E1CD1F3F40031945C /* MainPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E97B9A1CD1F3F40031945C /* MainPageController.m */; };
 		08E97B9F1CD1F3F40031945C /* MainPageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E97B9B1CD1F3F40031945C /* MainPageController.xib */; };
 		08E97BA31CD1F6DC0031945C /* XGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E97BA21CD1F6DC0031945C /* XGUtils.m */; };
 		08E9C4041CD1FDB500D9C055 /* maincell_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E9C4031CD1FDB500D9C055 /* maincell_back@2x.png */; };
-		08E9C41E1CD200E500D9C055 /* ArticleDraftHtmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E9C4071CD200E500D9C055 /* ArticleDraftHtmlParser.m */; };
 		08E9C41F1CD200E500D9C055 /* NSTextAttachmentURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E9C4091CD200E500D9C055 /* NSTextAttachmentURL.m */; };
-		08E9C4221CD200E500D9C055 /* MyWriteUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E9C40E1CD200E500D9C055 /* MyWriteUtils.m */; };
-		08E9C4251CD200E500D9C055 /* ArticleDraftStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E9C4151CD200E500D9C055 /* ArticleDraftStore.m */; };
-		08E9C4261CD200E500D9C055 /* MDArticleDraftDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E9C4171CD200E500D9C055 /* MDArticleDraftDataModel.m */; };
-		08E9C4291CD200E500D9C055 /* MyWriteTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E9C41D1CD200E500D9C055 /* MyWriteTextView.m */; };
 		08E9C4331CD2047E00D9C055 /* TMCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E9C42D1CD2047E00D9C055 /* TMCache.m */; };
 		08E9C4341CD2047E00D9C055 /* TMDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E9C4301CD2047E00D9C055 /* TMDiskCache.m */; };
 		08E9C4351CD2047E00D9C055 /* TMMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E9C4321CD2047E00D9C055 /* TMMemoryCache.m */; };
@@ -48,7 +52,6 @@
 		08E9C4701CD2048900D9C055 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E9C45B1CD2048900D9C055 /* UIImageView+WebCache.m */; };
 		08E9C4711CD2048900D9C055 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E9C45D1CD2048900D9C055 /* UIView+WebCacheOperation.m */; };
 		08E9C4721CD2048900D9C055 /* WebP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E9C45E1CD2048900D9C055 /* WebP.framework */; };
-		08E9C4751CD2051B00D9C055 /* DTHTMLWriter_Simple.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E9C4741CD2051B00D9C055 /* DTHTMLWriter_Simple.m */; };
 		08E9C47B1CD2077B00D9C055 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E9C4781CD2077B00D9C055 /* HTMLNode.m */; };
 		08E9C47C1CD2077B00D9C055 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E9C47A1CD2077B00D9C055 /* HTMLParser.m */; };
 		08E9C47E1CD207B700D9C055 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E9C47D1CD207B700D9C055 /* libxml2.tbd */; };
@@ -58,8 +61,6 @@
 		08E9C4861CD2085B00D9C055 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E9C4851CD2085B00D9C055 /* CoreText.framework */; };
 		08E9C4881CD2086A00D9C055 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E9C4871CD2086A00D9C055 /* ImageIO.framework */; };
 		08E9C48A1CD2088600D9C055 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E9C4891CD2088600D9C055 /* Foundation.framework */; };
-		08E9C48E1CD20E0200D9C055 /* MyWriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E9C48C1CD20E0200D9C055 /* MyWriteViewController.m */; };
-		08E9C48F1CD20E0200D9C055 /* MyWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E9C48D1CD20E0200D9C055 /* MyWriteViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08C50B0C1CD233DE00D3596B /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
+		08C50B0D1CD233DE00D3596B /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
+		08C50B0E1CD233DE00D3596B /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		08C50B0F1CD233DE00D3596B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		08C50B101CD233DE00D3596B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		08C50B191CD236A100D3596B /* XGNotesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGNotesController.h; sourceTree = "<group>"; };
+		08C50B1A1CD236A100D3596B /* XGNotesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGNotesController.m; sourceTree = "<group>"; };
+		08C50B1B1CD236A100D3596B /* XGNotesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XGNotesController.xib; sourceTree = "<group>"; };
+		08C50B1E1CD2378E00D3596B /* XGTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XGTextView.h; path = XG_Notes/Classes/XG_Notes/XGTextView.h; sourceTree = SOURCE_ROOT; };
+		08C50B1F1CD2378E00D3596B /* XGTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XGTextView.m; path = XG_Notes/Classes/XG_Notes/XGTextView.m; sourceTree = SOURCE_ROOT; };
+		08C50B211CD2383E00D3596B /* XGNotesStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGNotesStore.h; sourceTree = "<group>"; };
+		08C50B221CD2383E00D3596B /* XGNotesStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGNotesStore.m; sourceTree = "<group>"; };
+		08C50B241CD238F900D3596B /* XGNotesDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGNotesDataModel.h; sourceTree = "<group>"; };
+		08C50B251CD238F900D3596B /* XGNotesDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGNotesDataModel.m; sourceTree = "<group>"; };
+		08C50B271CD23C6600D3596B /* XGHtmlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGHtmlParser.h; sourceTree = "<group>"; };
+		08C50B281CD23C6600D3596B /* XGHtmlParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGHtmlParser.m; sourceTree = "<group>"; };
+		08C50B2A1CD23D6300D3596B /* XGHtmlBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGHtmlBuilder.h; sourceTree = "<group>"; };
+		08C50B2B1CD23D6300D3596B /* XGHtmlBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGHtmlBuilder.m; sourceTree = "<group>"; };
 		08E97B4A1CD1E6ED0031945C /* XG_Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XG_Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E97B4E1CD1E6ED0031945C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		08E97B501CD1E6ED0031945C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -92,8 +111,6 @@
 		08E97B6E1CD1E6EE0031945C /* XG_NotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XG_NotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E97B721CD1E6EE0031945C /* XG_NotesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XG_NotesUITests.m; sourceTree = "<group>"; };
 		08E97B741CD1E6EE0031945C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		08E97B921CD1F3C20031945C /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataModel.h; path = Classes/Simplate/DataModel.h; sourceTree = "<group>"; };
-		08E97B931CD1F3C20031945C /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataModel.m; path = Classes/Simplate/DataModel.m; sourceTree = "<group>"; };
 		08E97B961CD1F3F40031945C /* MainPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainPageCell.h; path = Classes/Simplate/MainPageCell.h; sourceTree = "<group>"; };
 		08E97B971CD1F3F40031945C /* MainPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainPageCell.m; path = Classes/Simplate/MainPageCell.m; sourceTree = "<group>"; };
 		08E97B981CD1F3F40031945C /* MainPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainPageCell.xib; path = Classes/Simplate/MainPageCell.xib; sourceTree = "<group>"; };
@@ -103,18 +120,8 @@
 		08E97BA11CD1F6DC0031945C /* XGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGUtils.h; sourceTree = "<group>"; };
 		08E97BA21CD1F6DC0031945C /* XGUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGUtils.m; sourceTree = "<group>"; };
 		08E9C4031CD1FDB500D9C055 /* maincell_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "maincell_back@2x.png"; sourceTree = "<group>"; };
-		08E9C4061CD200E500D9C055 /* ArticleDraftHtmlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDraftHtmlParser.h; sourceTree = "<group>"; };
-		08E9C4071CD200E500D9C055 /* ArticleDraftHtmlParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDraftHtmlParser.m; sourceTree = "<group>"; };
 		08E9C4081CD200E500D9C055 /* NSTextAttachmentURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTextAttachmentURL.h; sourceTree = "<group>"; };
 		08E9C4091CD200E500D9C055 /* NSTextAttachmentURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTextAttachmentURL.m; sourceTree = "<group>"; };
-		08E9C40D1CD200E500D9C055 /* MyWriteUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWriteUtils.h; sourceTree = "<group>"; };
-		08E9C40E1CD200E500D9C055 /* MyWriteUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWriteUtils.m; sourceTree = "<group>"; };
-		08E9C4141CD200E500D9C055 /* ArticleDraftStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDraftStore.h; sourceTree = "<group>"; };
-		08E9C4151CD200E500D9C055 /* ArticleDraftStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDraftStore.m; sourceTree = "<group>"; };
-		08E9C4161CD200E500D9C055 /* MDArticleDraftDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDArticleDraftDataModel.h; sourceTree = "<group>"; };
-		08E9C4171CD200E500D9C055 /* MDArticleDraftDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDArticleDraftDataModel.m; sourceTree = "<group>"; };
-		08E9C41C1CD200E500D9C055 /* MyWriteTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWriteTextView.h; sourceTree = "<group>"; };
-		08E9C41D1CD200E500D9C055 /* MyWriteTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWriteTextView.m; sourceTree = "<group>"; };
 		08E9C42C1CD2047E00D9C055 /* TMCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMCache.h; sourceTree = "<group>"; };
 		08E9C42D1CD2047E00D9C055 /* TMCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMCache.m; sourceTree = "<group>"; };
 		08E9C42E1CD2047E00D9C055 /* TMCacheBackgroundTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMCacheBackgroundTaskManager.h; sourceTree = "<group>"; };
@@ -162,8 +169,6 @@
 		08E9C45C1CD2048900D9C055 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		08E9C45D1CD2048900D9C055 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		08E9C45E1CD2048900D9C055 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebP.framework; sourceTree = "<group>"; };
-		08E9C4731CD2051B00D9C055 /* DTHTMLWriter_Simple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHTMLWriter_Simple.h; sourceTree = "<group>"; };
-		08E9C4741CD2051B00D9C055 /* DTHTMLWriter_Simple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTHTMLWriter_Simple.m; sourceTree = "<group>"; };
 		08E9C4771CD2077B00D9C055 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
 		08E9C4781CD2077B00D9C055 /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
 		08E9C4791CD2077B00D9C055 /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
@@ -175,9 +180,6 @@
 		08E9C4851CD2085B00D9C055 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		08E9C4871CD2086A00D9C055 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		08E9C4891CD2088600D9C055 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		08E9C48B1CD20E0200D9C055 /* MyWriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyWriteViewController.h; path = ../../../../../Tanke/TanKe_iOS/trunk/Tanker/Tanker/TankerFront/Happywood/MyPage/MyWriteViewController.h; sourceTree = "<group>"; };
-		08E9C48C1CD20E0200D9C055 /* MyWriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyWriteViewController.m; path = ../../../../../Tanke/TanKe_iOS/trunk/Tanker/Tanker/TankerFront/Happywood/MyPage/MyWriteViewController.m; sourceTree = "<group>"; };
-		08E9C48D1CD20E0200D9C055 /* MyWriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyWriteViewController.xib; path = ../../../../../Tanke/TanKe_iOS/trunk/Tanker/Tanker/TankerFront/Happywood/MyPage/MyWriteViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08C50B0B1CD233DE00D3596B /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				08C50B0C1CD233DE00D3596B /* MBProgressHUD+Add.h */,
+				08C50B0D1CD233DE00D3596B /* MBProgressHUD+Add.m */,
+				08C50B0E1CD233DE00D3596B /* MBProgressHUD.bundle */,
+				08C50B0F1CD233DE00D3596B /* MBProgressHUD.h */,
+				08C50B101CD233DE00D3596B /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		08E97B411CD1E6ED0031945C = {
 			isa = PBXGroup;
 			children = (
@@ -299,8 +313,6 @@
 				08E97B991CD1F3F40031945C /* MainPageController.h */,
 				08E97B9A1CD1F3F40031945C /* MainPageController.m */,
 				08E97B9B1CD1F3F40031945C /* MainPageController.xib */,
-				08E97B921CD1F3C20031945C /* DataModel.h */,
-				08E97B931CD1F3C20031945C /* DataModel.m */,
 			);
 			name = Simplate;
 			sourceTree = "<group>";
@@ -308,16 +320,15 @@
 		08E97BA01CD1F40D0031945C /* XG_Notes */ = {
 			isa = PBXGroup;
 			children = (
-				08E9C48B1CD20E0200D9C055 /* MyWriteViewController.h */,
-				08E9C48C1CD20E0200D9C055 /* MyWriteViewController.m */,
-				08E9C48D1CD20E0200D9C055 /* MyWriteViewController.xib */,
+				08C50B1E1CD2378E00D3596B /* XGTextView.h */,
+				08C50B1F1CD2378E00D3596B /* XGTextView.m */,
 				08E9C4051CD200E500D9C055 /* HtmlParserAndBuilding */,
-				08E9C40D1CD200E500D9C055 /* MyWriteUtils.h */,
-				08E9C40E1CD200E500D9C055 /* MyWriteUtils.m */,
 				08E9C4131CD200E500D9C055 /* SaveAndRead */,
-				08E9C4181CD200E500D9C055 /* View */,
 				08E97BA11CD1F6DC0031945C /* XGUtils.h */,
 				08E97BA21CD1F6DC0031945C /* XGUtils.m */,
+				08C50B191CD236A100D3596B /* XGNotesController.h */,
+				08C50B1A1CD236A100D3596B /* XGNotesController.m */,
+				08C50B1B1CD236A100D3596B /* XGNotesController.xib */,
 			);
 			name = XG_Notes;
 			path = Classes/XG_Notes;
@@ -334,12 +345,12 @@
 		08E9C4051CD200E500D9C055 /* HtmlParserAndBuilding */ = {
 			isa = PBXGroup;
 			children = (
-				08E9C4731CD2051B00D9C055 /* DTHTMLWriter_Simple.h */,
-				08E9C4741CD2051B00D9C055 /* DTHTMLWriter_Simple.m */,
-				08E9C4061CD200E500D9C055 /* ArticleDraftHtmlParser.h */,
-				08E9C4071CD200E500D9C055 /* ArticleDraftHtmlParser.m */,
 				08E9C4081CD200E500D9C055 /* NSTextAttachmentURL.h */,
 				08E9C4091CD200E500D9C055 /* NSTextAttachmentURL.m */,
+				08C50B271CD23C6600D3596B /* XGHtmlParser.h */,
+				08C50B281CD23C6600D3596B /* XGHtmlParser.m */,
+				08C50B2A1CD23D6300D3596B /* XGHtmlBuilder.h */,
+				08C50B2B1CD23D6300D3596B /* XGHtmlBuilder.m */,
 			);
 			path = HtmlParserAndBuilding;
 			sourceTree = "<group>";
@@ -347,26 +358,18 @@
 		08E9C4131CD200E500D9C055 /* SaveAndRead */ = {
 			isa = PBXGroup;
 			children = (
-				08E9C4141CD200E500D9C055 /* ArticleDraftStore.h */,
-				08E9C4151CD200E500D9C055 /* ArticleDraftStore.m */,
-				08E9C4161CD200E500D9C055 /* MDArticleDraftDataModel.h */,
-				08E9C4171CD200E500D9C055 /* MDArticleDraftDataModel.m */,
+				08C50B211CD2383E00D3596B /* XGNotesStore.h */,
+				08C50B221CD2383E00D3596B /* XGNotesStore.m */,
+				08C50B241CD238F900D3596B /* XGNotesDataModel.h */,
+				08C50B251CD238F900D3596B /* XGNotesDataModel.m */,
 			);
 			path = SaveAndRead;
-			sourceTree = "<group>";
-		};
-		08E9C4181CD200E500D9C055 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				08E9C41C1CD200E500D9C055 /* MyWriteTextView.h */,
-				08E9C41D1CD200E500D9C055 /* MyWriteTextView.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		08E9C42A1CD2046300D9C055 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				08C50B0B1CD233DE00D3596B /* MBProgressHUD */,
 				08E9C4761CD2077B00D9C055 /* HtmlParser */,
 				08E9C4361CD2048900D9C055 /* SDWebImage */,
 				08E9C42B1CD2047E00D9C055 /* TMCache */,
@@ -550,10 +553,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				08E97B9D1CD1F3F40031945C /* MainPageCell.xib in Resources */,
-				08E9C48F1CD20E0200D9C055 /* MyWriteViewController.xib in Resources */,
 				08E97B5A1CD1E6ED0031945C /* Assets.xcassets in Resources */,
 				08E9C4041CD1FDB500D9C055 /* maincell_back@2x.png in Resources */,
 				08E97B9F1CD1F3F40031945C /* MainPageController.xib in Resources */,
+				08C50B1D1CD236A100D3596B /* XGNotesController.xib in Resources */,
+				08C50B121CD233DE00D3596B /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,31 +587,30 @@
 				08E9C46E1CD2048900D9C055 /* UIImageView+HighlightedWebCache.m in Sources */,
 				08E9C4701CD2048900D9C055 /* UIImageView+WebCache.m in Sources */,
 				08E9C4341CD2047E00D9C055 /* TMDiskCache.m in Sources */,
-				08E9C4291CD200E500D9C055 /* MyWriteTextView.m in Sources */,
 				08E9C4681CD2048900D9C055 /* SDWebImageManager.m in Sources */,
 				08E9C4331CD2047E00D9C055 /* TMCache.m in Sources */,
-				08E9C48E1CD20E0200D9C055 /* MyWriteViewController.m in Sources */,
-				08E9C4261CD200E500D9C055 /* MDArticleDraftDataModel.m in Sources */,
 				08E9C4671CD2048900D9C055 /* SDWebImageManager+MJ.m in Sources */,
+				08C50B1C1CD236A100D3596B /* XGNotesController.m in Sources */,
 				08E9C4691CD2048900D9C055 /* SDWebImagePrefetcher.m in Sources */,
-				08E97B941CD1F3C20031945C /* DataModel.m in Sources */,
+				08C50B291CD23C6600D3596B /* XGHtmlParser.m in Sources */,
 				08E9C47C1CD2077B00D9C055 /* HTMLParser.m in Sources */,
-				08E9C4221CD200E500D9C055 /* MyWriteUtils.m in Sources */,
+				08C50B2C1CD23D6300D3596B /* XGHtmlBuilder.m in Sources */,
 				08E9C4351CD2047E00D9C055 /* TMMemoryCache.m in Sources */,
 				08E9C46B1CD2048900D9C055 /* UIImage+GIF.m in Sources */,
 				08E9C46D1CD2048900D9C055 /* UIImage+WebP.m in Sources */,
+				08C50B261CD238F900D3596B /* XGNotesDataModel.m in Sources */,
 				08E9C4711CD2048900D9C055 /* UIView+WebCacheOperation.m in Sources */,
-				08E9C4251CD200E500D9C055 /* ArticleDraftStore.m in Sources */,
+				08C50B111CD233DE00D3596B /* MBProgressHUD+Add.m in Sources */,
 				08E9C41F1CD200E500D9C055 /* NSTextAttachmentURL.m in Sources */,
 				08E97B521CD1E6ED0031945C /* AppDelegate.m in Sources */,
 				08E97B4F1CD1E6ED0031945C /* main.m in Sources */,
+				08C50B131CD233DE00D3596B /* MBProgressHUD.m in Sources */,
 				08E9C46F1CD2048900D9C055 /* UIImageView+MJWebCache.m in Sources */,
 				08E9C4611CD2048900D9C055 /* NSData+ImageContentType.m in Sources */,
 				08E9C4601CD2048900D9C055 /* NSData+GIF.m in Sources */,
-				08E9C41E1CD200E500D9C055 /* ArticleDraftHtmlParser.m in Sources */,
 				08E9C4641CD2048900D9C055 /* SDWebImageDecoder.m in Sources */,
-				08E9C4751CD2051B00D9C055 /* DTHTMLWriter_Simple.m in Sources */,
 				08E9C46C1CD2048900D9C055 /* UIImage+MultiFormat.m in Sources */,
+				08C50B231CD2383E00D3596B /* XGNotesStore.m in Sources */,
 				08E9C46A1CD2048900D9C055 /* UIButton+WebCache.m in Sources */,
 				08E9C4661CD2048900D9C055 /* SDWebImageDownloaderOperation.m in Sources */,
 				08E9C45F1CD2048900D9C055 /* MKAnnotationView+WebCache.m in Sources */,
@@ -615,6 +618,7 @@
 				08E9C47B1CD2077B00D9C055 /* HTMLNode.m in Sources */,
 				08E97B9C1CD1F3F40031945C /* MainPageCell.m in Sources */,
 				08E9C4631CD2048900D9C055 /* SDWebImageCompat.m in Sources */,
+				08C50B201CD2378E00D3596B /* XGTextView.m in Sources */,
 				08E9C4621CD2048900D9C055 /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

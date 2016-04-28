@@ -1,9 +1,10 @@
 //
-//  MDArticleDraftDataModel.h
-//  Tanker
+//  XGNotesDataModel.h
+//  XG_Notes
 //
-//  Created by 贾  on 16/1/15.
-//  Copyright © 2016年 Tanker. All rights reserved.
+//  Created by 贾  on 16/4/28.
+//  Copyright © 2016年 XiaoGang. All rights reserved.
+//  github: https://github.com/jiaxiaogang/XG_Notes
 //
 
 #import <Foundation/Foundation.h>
@@ -13,8 +14,7 @@
 /**
  *  MARK:--------------------本地存储 未发布,审核中,未通过 三种状态的草稿--------------------
  */
-
-@interface MDArticleDraftDataModel : NSObject
+@interface XGNotesDataModel : NSObject
 
 
 -(id) initWithDraftDic:(NSDictionary*)dic;
@@ -27,6 +27,5 @@
 @property (strong,nonatomic) NSString *lastUpdateTime;
 
 -(void)saveToDisk;
-
 
 @end
