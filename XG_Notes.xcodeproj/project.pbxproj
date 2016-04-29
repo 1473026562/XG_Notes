@@ -61,6 +61,11 @@
 		08E9C4861CD2085B00D9C055 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E9C4851CD2085B00D9C055 /* CoreText.framework */; };
 		08E9C4881CD2086A00D9C055 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E9C4871CD2086A00D9C055 /* ImageIO.framework */; };
 		08E9C48A1CD2088600D9C055 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E9C4891CD2088600D9C055 /* Foundation.framework */; };
+		08F5A7291CD342E300B7EE48 /* XGNotesTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F5A7281CD342E300B7EE48 /* XGNotesTableView.m */; };
+		08F5A72D1CD348E900B7EE48 /* XGNotesPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F5A72B1CD348E900B7EE48 /* XGNotesPhotoCell.m */; };
+		08F5A72E1CD348E900B7EE48 /* XGNotesPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08F5A72C1CD348E900B7EE48 /* XGNotesPhotoCell.xib */; };
+		08F5A7321CD348FF00B7EE48 /* XGNotesTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F5A7301CD348FF00B7EE48 /* XGNotesTextViewCell.m */; };
+		08F5A7331CD348FF00B7EE48 /* XGNotesTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08F5A7311CD348FF00B7EE48 /* XGNotesTextViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +185,14 @@
 		08E9C4851CD2085B00D9C055 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		08E9C4871CD2086A00D9C055 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		08E9C4891CD2088600D9C055 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		08F5A7271CD342E300B7EE48 /* XGNotesTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGNotesTableView.h; sourceTree = "<group>"; };
+		08F5A7281CD342E300B7EE48 /* XGNotesTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGNotesTableView.m; sourceTree = "<group>"; };
+		08F5A72A1CD348E900B7EE48 /* XGNotesPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGNotesPhotoCell.h; sourceTree = "<group>"; };
+		08F5A72B1CD348E900B7EE48 /* XGNotesPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGNotesPhotoCell.m; sourceTree = "<group>"; };
+		08F5A72C1CD348E900B7EE48 /* XGNotesPhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XGNotesPhotoCell.xib; sourceTree = "<group>"; };
+		08F5A72F1CD348FF00B7EE48 /* XGNotesTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGNotesTextViewCell.h; sourceTree = "<group>"; };
+		08F5A7301CD348FF00B7EE48 /* XGNotesTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGNotesTextViewCell.m; sourceTree = "<group>"; };
+		08F5A7311CD348FF00B7EE48 /* XGNotesTextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XGNotesTextViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +342,14 @@
 				08C50B191CD236A100D3596B /* XGNotesController.h */,
 				08C50B1A1CD236A100D3596B /* XGNotesController.m */,
 				08C50B1B1CD236A100D3596B /* XGNotesController.xib */,
+				08F5A7271CD342E300B7EE48 /* XGNotesTableView.h */,
+				08F5A7281CD342E300B7EE48 /* XGNotesTableView.m */,
+				08F5A72A1CD348E900B7EE48 /* XGNotesPhotoCell.h */,
+				08F5A72B1CD348E900B7EE48 /* XGNotesPhotoCell.m */,
+				08F5A72C1CD348E900B7EE48 /* XGNotesPhotoCell.xib */,
+				08F5A72F1CD348FF00B7EE48 /* XGNotesTextViewCell.h */,
+				08F5A7301CD348FF00B7EE48 /* XGNotesTextViewCell.m */,
+				08F5A7311CD348FF00B7EE48 /* XGNotesTextViewCell.xib */,
 			);
 			name = XG_Notes;
 			path = Classes/XG_Notes;
@@ -552,6 +573,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08F5A7331CD348FF00B7EE48 /* XGNotesTextViewCell.xib in Resources */,
+				08F5A72E1CD348E900B7EE48 /* XGNotesPhotoCell.xib in Resources */,
 				08E97B9D1CD1F3F40031945C /* MainPageCell.xib in Resources */,
 				08E97B5A1CD1E6ED0031945C /* Assets.xcassets in Resources */,
 				08E9C4041CD1FDB500D9C055 /* maincell_back@2x.png in Resources */,
@@ -582,12 +605,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08F5A7291CD342E300B7EE48 /* XGNotesTableView.m in Sources */,
 				08E9C4651CD2048900D9C055 /* SDWebImageDownloader.m in Sources */,
 				08E97B9E1CD1F3F40031945C /* MainPageController.m in Sources */,
 				08E9C46E1CD2048900D9C055 /* UIImageView+HighlightedWebCache.m in Sources */,
 				08E9C4701CD2048900D9C055 /* UIImageView+WebCache.m in Sources */,
 				08E9C4341CD2047E00D9C055 /* TMDiskCache.m in Sources */,
 				08E9C4681CD2048900D9C055 /* SDWebImageManager.m in Sources */,
+				08F5A72D1CD348E900B7EE48 /* XGNotesPhotoCell.m in Sources */,
 				08E9C4331CD2047E00D9C055 /* TMCache.m in Sources */,
 				08E9C4671CD2048900D9C055 /* SDWebImageManager+MJ.m in Sources */,
 				08C50B1C1CD236A100D3596B /* XGNotesController.m in Sources */,
@@ -610,6 +635,7 @@
 				08E9C4601CD2048900D9C055 /* NSData+GIF.m in Sources */,
 				08E9C4641CD2048900D9C055 /* SDWebImageDecoder.m in Sources */,
 				08E9C46C1CD2048900D9C055 /* UIImage+MultiFormat.m in Sources */,
+				08F5A7321CD348FF00B7EE48 /* XGNotesTextViewCell.m in Sources */,
 				08C50B231CD2383E00D3596B /* XGNotesStore.m in Sources */,
 				08E9C46A1CD2048900D9C055 /* UIButton+WebCache.m in Sources */,
 				08E9C4661CD2048900D9C055 /* SDWebImageDownloaderOperation.m in Sources */,
