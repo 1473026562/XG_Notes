@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tvBottomSpaConstraints;
 @property (weak, nonatomic) IBOutlet XGTextView *textView;
 @property (nonatomic, strong) UIBarButtonItem *saveBtn;
+@property (nonatomic, strong) UIBarButtonItem *addImgBtn;
 @property (strong,nonatomic) NSMutableArray *imgAttachmentArr;
 @property (strong,nonatomic) XGNotesDataModel *draftData;    //草稿数据模型;每次编辑或新建草稿都有一个模型实例;
 @property (assign, nonatomic) BOOL isNewDraft;                      //新文章
@@ -113,7 +114,11 @@
 - (void)setupNavBar{
     self.saveBtn = [[UIBarButtonItem alloc] initWithTitle:@"保存草稿" style:UIBarButtonItemStyleDone target:self action:@selector(saveBtnOnClick)];
     [self.saveBtn setTintColor:[UIColor blackColor]];
-    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:self.saveBtn , nil];
+    
+    self.addImgBtn = [[UIBarButtonItem alloc] initWithTitle:@"插入图片" style:UIBarButtonItemStyleDone target:self action:@selector(addImgBtnOnClick)];
+    [self.addImgBtn setTintColor:[UIColor blackColor]];
+    
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:self.addImgBtn,self.saveBtn , nil];
 }
 
 -(void) goBack{
@@ -143,6 +148,21 @@
     [self saveDraftToLocalTMCache];
     [MBProgressHUD showSuccess:@"保存成功" toView:self.view];
 }
+
+-(void)addImgBtnOnClick{
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+    UIActionSheet *sheet;
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        sheet  = [[UIActionSheet alloc] initWithTitle:@"选择图像" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照", @"从相册选择", nil];
+    }else {
+        sheet = [[UIActionSheet alloc] initWithTitle:@"选择图像" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"从相册选择", nil];
+    }
+    sheet.tag = 255;
+    [sheet showInView:self.view];
+}
+
+
+
 -(void) saveDraftToLocalTMCache{
     if(self.draftData==nil) return;
     
@@ -188,22 +208,6 @@
         [self.textView layoutIfNeeded];
     }completion:^(BOOL finish){
     }];
-}
-
-/**
- *  MARK:--------------------添加图片--------------------
- */
-- (void)addImgByToolBar
-{
-    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
-    UIActionSheet *sheet;
-    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-        sheet  = [[UIActionSheet alloc] initWithTitle:@"选择图像" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照", @"从相册选择", nil];
-    }else {
-        sheet = [[UIActionSheet alloc] initWithTitle:@"选择图像" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"从相册选择", nil];
-    }
-    sheet.tag = 255;
-    [sheet showInView:self.view];
 }
 
 
